@@ -13,6 +13,16 @@
         android:theme="@style/Theme.Pokedex"
         tools:targetApi="31">
         <activity
+            android:name=".DatabaseActivity"
+            android:exported="false" />
+
+        <provider
+            android:name=".PokedexContentProvider"
+            android:authorities=".com.pokedex.app.main"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
